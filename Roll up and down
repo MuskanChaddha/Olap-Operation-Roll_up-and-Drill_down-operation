@@ -1,0 +1,46 @@
+l1={'Punjab':5,'Himachal_Pradesh':10,'Uttarpradesh':2,'goa':5,'Andhra Pradesh':10}
+l2={'Washington_DC':2,'Newyork':1,'Boston':3}
+
+dict={
+      'india':{'state_medals':l1},
+      'usa':{'state_medals':l2}
+     }
+
+print("What You Want To perform ?\n Roll_up then enter => (u)/(U) \n Drill_down then Enter (d)/(D) ")
+userchoice = input("\nEnter The Choice \n")
+search_coun = input("\nEnter country to count the number of Medals \n")
+
+if userchoice == 'u' or userchoice=='U':
+
+ for key,value in dict.items():
+
+     if search_coun =='india' and key=='india':
+
+        print("")
+        print("{} Dataset :: ".format(search_coun.capitalize()),key,value)
+        print("The Total Number Of Medals Are",sum(l1.values()))
+
+
+     if search_coun =='usa' and key=='usa':
+
+         print("\n{} Dataset :: ".format(search_coun.capitalize()), key, value)
+         print("\nThe Total Number Of Medals Are", sum(l2.values()))
+
+
+elif userchoice=='d' or userchoice=='D':
+    for key, value in dict.items():
+
+        if search_coun == 'india' and key == 'india':
+
+            print("{} Data => ".format(search_coun.capitalize()), key, value)
+
+            for k,v in l1.items():
+                print(k,v)
+
+        if search_coun == 'usa' and key == 'usa':
+
+            print("{} Data => ".format(search_coun.capitalize()), key, value)
+
+            for k,v in l2.items():
+                print("",k,v)
+
